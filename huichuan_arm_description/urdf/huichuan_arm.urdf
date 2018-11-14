@@ -1,0 +1,391 @@
+<robot
+  name="huichuan_arm">
+  <link
+    name="link_0">
+    <inertial>
+      <origin
+        xyz="0.016159 0.099039 -0.062276"
+        rpy="0 0 0" />
+      <mass
+        value="6.9262" />
+      <inertia
+        ixx="0.037951"
+        ixy="0.00057219"
+        ixz="-0.00020371"
+        iyy="0.041753"
+        iyz="-1.1994E-05"
+        izz="0.048928" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://huichuan_arm/meshes/link_0.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://huichuan_arm/meshes/link_0.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link_1">
+    <inertial>
+      <origin
+        xyz="-0.023596 6.0229E-05 -0.10188"
+        rpy="0 0 0" />
+      <mass
+        value="3.9856" />
+      <inertia
+        ixx="0.039678"
+        ixy="2.2975E-06"
+        ixz="-0.0051384"
+        iyy="0.024861"
+        iyz="1.8016E-05"
+        izz="0.031304" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://huichuan_arm/meshes/link_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://huichuan_arm/meshes/link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_1"
+    type="revolute">
+    <origin
+      xyz="0 0.0625 0.19715"
+      rpy="3.1416 0 0" />
+    <parent
+      link="link_0" />
+    <child
+      link="link_1" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.484"
+      upper="1.484"
+      effort="0"
+      velocity="3.84" />
+  </joint>
+  <link
+    name="link_2">
+    <inertial>
+      <origin
+        xyz="0.00537578800812372 -0.0269729949500887 -0.000102450997665662"
+        rpy="0 0 0" />
+      <mass
+        value="16.1900771502942" />
+      <inertia
+        ixx="1.12450076568746"
+        ixy="-0.352995474004532"
+        ixz="-0.000391024384724165"
+        iyy="0.275290518486214"
+        iyz="-0.000401939443959672"
+        izz="1.30935621199594" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://huichuan_arm/meshes/link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://huichuan_arm/meshes/link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_2"
+    type="revolute">
+    <origin
+      xyz="-0.05 0 -0.16885"
+      rpy="-1.5708 -6.9389E-16 3.1416" />
+    <parent
+      link="link_1" />
+    <child
+      link="link_2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.265"
+      upper="0.681"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_3">
+    <inertial>
+      <origin
+        xyz="5.6145E-05 -0.012484 0.020197"
+        rpy="0 0 0" />
+      <mass
+        value="1.7907" />
+      <inertia
+        ixx="0.0056217"
+        ixy="4.7831E-07"
+        ixz="-5.3393E-06"
+        iyy="0.0043333"
+        iyz="-0.00053155"
+        izz="0.0038153" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://huichuan_arm/meshes/link_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://huichuan_arm/meshes/link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_3"
+    type="revolute">
+    <origin
+      xyz="0 0.285 0"
+      rpy="3.1416 1.5708 0" />
+    <parent
+      link="link_2" />
+    <child
+      link="link_3" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.619"
+      upper="1.509"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_4">
+    <inertial>
+      <origin
+        xyz="-0.00047659 -0.0014938 -0.12666"
+        rpy="0 0 0" />
+      <mass
+        value="2.9518" />
+      <inertia
+        ixx="0.016526"
+        ixy="1.5453E-06"
+        ixz="-0.00017728"
+        iyy="0.019492"
+        iyz="-3.5231E-05"
+        izz="0.007518" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://huichuan_arm/meshes/link_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://huichuan_arm/meshes/link_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_4"
+    type="revolute">
+    <origin
+      xyz="0 -0.045 -0.048453"
+      rpy="0 0 3.1416" />
+    <parent
+      link="link_3" />
+    <child
+      link="link_4" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.745"
+      upper="1.745"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_5">
+    <inertial>
+      <origin
+        xyz="0.014994 1.4899E-05 -0.0031563"
+        rpy="0 0 0" />
+      <mass
+        value="0.51914" />
+      <inertia
+        ixx="0.0004606"
+        ixy="5.2041E-08"
+        ixz="-2.8077E-05"
+        iyy="0.00068301"
+        iyz="-1.9337E-07"
+        izz="0.00063417" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://huichuan_arm/meshes/link_5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://huichuan_arm/meshes/link_5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_5"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.25155"
+      rpy="3.1416 1.5708 0" />
+    <parent
+      link="link_4" />
+    <child
+      link="link_5" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.047"
+      upper="1.047"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_6">
+    <inertial>
+      <origin
+        xyz="0.004378 0.00012061 4.3021E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.016668" />
+      <inertia
+        ixx="5.3036E-06"
+        ixy="-5.7536E-09"
+        ixz="2.0278E-20"
+        iyy="2.796E-06"
+        iyz="3.6184E-20"
+        izz="2.7641E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://huichuan_arm/meshes/link_6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://huichuan_arm/meshes/link_6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_6"
+    type="continuous">
+    <origin
+      xyz="0.0695 0 0"
+      rpy="-0.017978 0 0" />
+    <parent
+      link="link_5" />
+    <child
+      link="link_6" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
