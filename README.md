@@ -13,6 +13,8 @@ $ roslaunch moveit_IRB300 demo_planning_execution.launch
 
 ## Instructions for simulating Gazebo and Moveit together
 ### 1. Export URDF from Solidworks
+You have to install the [Solidworks-Urdf Exporter](http://wiki.ros.org/sw_urdf_exporter) first.
+
 ### 2. Verify the joints configuration (axis, rotating direction)
 
 ## Possible issues
