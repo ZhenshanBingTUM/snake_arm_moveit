@@ -62,7 +62,31 @@ b. Add URDF transmission element
     </actuator>
   </transmission>
 ```
-c. examine it by checking avalible rostopics
+#### 2). Launch file
+a. Add "robot_state_publisher"
+b. Add "fake_joint_calibration"
+c. Add "joint_state_controler"
+d. Add "arm_controller"
+
+#### 3). Examine it by checking avalible rostopics (arm_controller)
+
+#### 4). Prepare MoveIt files
+a. Create the *controller.yaml* in "/moveit_IRB300/config"
+
+First of all, you have to create a file to define how you will control the joints of your "real" robot.
+
+b. Create the *joint_names.yaml* in "/moveit_IRB300/config"
+
+You will have to create a file to define the names of the joints of your robot.
+
+c. Modify *IRB300_description_moveit_controller_manager.launch.xml* in "/moveit_IRB300/launch"
+
+By doing this, you will load the "controller.yaml", and the *MoveItSimpleControllerManager* plugin, which will allow you to send the plans calculated in MoveIt to your "real" robot, in this case, the simulated robot.
+
+d. Create *demo_planning_execution.launch*
+
+Finally, you will have to create a new launch file that sets up all the system to control your robot. 
+
 
 ## Possible issues
 
@@ -70,3 +94,6 @@ c. examine it by checking avalible rostopics
 ```
 $ sudo apt-get install ros-kinetic*controllers*
 ```
+
+## Help Materials
+[ROS Q&A](https://www.youtube.com/watch?v=j6bBxfD_bYs&t=1156s)
