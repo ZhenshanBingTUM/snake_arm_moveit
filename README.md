@@ -97,3 +97,4 @@ $ sudo apt-get install ros-kinetic*controllers*
 
 ## Notes
 [ROS Q&A](https://www.youtube.com/watch?v=j6bBxfD_bYs&t=1156s)
+[Link](https://github.com/AS4SR/general_info/wiki/Basic-ROS-MoveIt!-and-Gazebo-Integration#MoveIt_Config_Directory)
