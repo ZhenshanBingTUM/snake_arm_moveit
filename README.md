@@ -81,7 +81,7 @@ You will have to create a file to define the names of the joints of your robot.
 
 c. Modify *IRB300_description_moveit_controller_manager.launch.xml* in "/moveit_IRB300/launch"
 
-By doing this, you will load the "controller.yaml", and the *MoveItSimpleControllerManager* plugin, which will allow you to send the plans calculated in MoveIt to your "real" robot, in this case, the simulated robot.
+By doing this, you will load the *controller.yaml*, and the *MoveItSimpleControllerManager* plugin, which will allow you to send the plans calculated in MoveIt to your "real" robot, in this case, the simulated robot.
 
 d. Create *demo_planning_execution.launch*
 
@@ -95,5 +95,5 @@ Finally, you will have to create a new launch file that sets up all the system t
 $ sudo apt-get install ros-kinetic*controllers*
 ```
 
-## Help Materials
+## Notes
 [ROS Q&A](https://www.youtube.com/watch?v=j6bBxfD_bYs&t=1156s)
