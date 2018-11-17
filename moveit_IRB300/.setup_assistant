@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: IRB300_description
+    relative_path: urdf/IRB300_description.urdf
+    xacro_args: "--inorder "
+  SRDF:
+    relative_path: config/IRB300_description.srdf
+  CONFIG:
+    author_name: test
+    author_email: test@gmail.com
+    generated_timestamp: 1542203515

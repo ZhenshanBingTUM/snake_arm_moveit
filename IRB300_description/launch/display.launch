@@ -6,7 +6,7 @@
     default="False" />
   <param
     name="robot_description"
-    textfile="$(find huichuan_arm)/robots/huichuan_arm.urdf" />
+    textfile="$(find IRB300_description)/robots/IRB300_description.urdf" />
   <param
     name="use_gui"
     value="$(arg gui)" />
@@ -22,5 +22,5 @@
     name="rviz"
     pkg="rviz"
     type="rviz"
-    args="-d $(find huichuan_arm)/urdf.rviz" />
+    args="-d $(find IRB300_description)/urdf.rviz" />
 </launch>
