@@ -38,9 +38,31 @@ Then you will have your package and you can examine it by running
 ```
 $ roslaunch moveit_IRB300 demo.launch
 ```
-Examine it by following the [moveit tutorial](http://docs.ros.org/kinetic/api/moveit_tutorials/html/doc/quickstart_in_rviz/quickstart_in_rviz_tutorial.html#getting-started)
+Examine it by following the [moveit tutorial](http://docs.ros.org/kinetic/api/moveit_tutorials/html/doc/quickstart_in_rviz/quickstart_in_rviz_tutorial.html#getting-started).
 
-### 5. 
+### 5. Prepare all the files for connecting MoveIt and Gazebo
+#### 1). URDF file
+a. Add gazebo plugin
+```
+<gazebo>
+    <plugin name="ros_control" filename="libgazebo_ros_control.so">
+      
+    </plugin>
+  </gazebo>
+``` 
+b. Add URDF transmission element
+```
+<transmission name="tranX">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_X">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motorX">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+```
+c. examine it by checking avalible rostopics
 
 ## Possible issues
 
