@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: snake_arm_description
+    relative_path: urdf/snake_arm_description.urdf
+    xacro_args: "--inorder "
+  SRDF:
+    relative_path: config/snake_arm_description.srdf
+  CONFIG:
+    author_name: test
+    author_email: test@gmail.com
+    generated_timestamp: 1542706909

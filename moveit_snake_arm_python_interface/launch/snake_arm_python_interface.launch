@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<launch>
+	<node name="snake_arm_python_interface" pkg="moveit_snake_arm_python_interface" type="moveit_snake_arm_python_interface.py" respawn="false" output="screen">
+	</node>
+</launch>
